@@ -1,7 +1,9 @@
 <div class="col-md-offset-2">
   <div class="form-group">
     <div class="form-horizontal">
-      <%= form_for :user, url: signup_path do |f| %>
+      <%= form_for @user do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+
           <div class="form-group">
             <%= f.label :name, class: 'col-sm-2 control-label' %>
             <div class="col-sm-6">
